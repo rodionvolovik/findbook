@@ -5,9 +5,7 @@ import sys
 import numpy as np
 import cv2
 
-image_name = sys.argv[0]
-print(image_name)
-image = cv2.imread(image_name)
+image = cv2.imread("1-3,jpg")
 gray_im = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray_im = cv2.GaussianBlur(gray_im, (3, 3), 0)
 cv2.imwrite('gray.jpg', gray_im);
